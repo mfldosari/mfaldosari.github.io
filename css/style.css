@@ -174,25 +174,29 @@ body {
 /* ---------- Stage ---------- */
 main { position: relative; z-index: 1; }
 .stage {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
   padding: calc(var(--header-h) + 40px) 20px 60px;
 }
 
 /* ---------- The Helm (steering wheel) ---------- */
+/* Positioned absolutely so it never affects the panel's layout —
+   the panel alone determines the page's scroll height. */
 .helm-wrap {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: min(440px, 84vw);
   aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%);
   transition: opacity .9s ease, filter .9s ease, transform .9s ease;
 }
 .helm-wrap.submerged {
   opacity: .3;
-  transform: scale(.78);
+  transform: translate(-50%, -50%) scale(.78);
   filter: url(#watery) blur(2.5px) saturate(1.15);
 }
 
@@ -518,7 +522,6 @@ html[dir="rtl"] .section-tag { text-transform: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .stage { flex-direction: column; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 
