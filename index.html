@@ -14,6 +14,27 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="gear-icon" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="5">
+      <circle cx="50" cy="50" r="27"/>
+      <circle cx="50" cy="50" r="8"/>
+      <g>
+        <rect x="45" y="1" width="10" height="16"/>
+        <rect x="45" y="83" width="10" height="16"/>
+        <rect x="1" y="45" width="16" height="10"/>
+        <rect x="83" y="45" width="16" height="10"/>
+      </g>
+      <g transform="rotate(45 50 50)">
+        <rect x="45" y="1" width="10" height="16"/>
+        <rect x="45" y="83" width="10" height="16"/>
+        <rect x="1" y="45" width="16" height="10"/>
+        <rect x="83" y="45" width="16" height="10"/>
+      </g>
+    </g>
+  </symbol>
+</svg>
+
 <header class="site-header" id="siteHeader">
   <div class="container nav-wrap">
     <a href="#home" class="logo" aria-label="Home">
@@ -46,7 +67,13 @@
   <!-- HERO -->
   <section id="home" class="hero">
     <div class="hero-glow" aria-hidden="true"></div>
-    <div class="container hero-inner">
+    <div class="gear-decor" aria-hidden="true">
+      <svg class="gear gear--1"><use href="#gear-icon"/></svg>
+      <svg class="gear gear--2"><use href="#gear-icon"/></svg>
+      <svg class="gear gear--3"><use href="#gear-icon"/></svg>
+    </div>
+    <div class="container hero-columns">
+    <div class="hero-inner">
       <p class="eyebrow reveal">
         <span class="lang-en">Hello, I'm</span>
         <span class="lang-ar">مرحباً، أنا</span>
@@ -92,6 +119,60 @@
         </a>
       </div>
     </div>
+
+    <div class="hero-visual reveal" aria-hidden="true">
+      <svg class="server-illustration" viewBox="0 0 240 340" xmlns="http://www.w3.org/2000/svg">
+        <path class="cable cable-1" d="M24 254 C -8 264, -12 300, -44 316" fill="none" stroke-linecap="round"/>
+        <path class="cable cable-2" d="M24 272 C -2 286, -10 312, -34 334" fill="none" stroke-linecap="round"/>
+        <circle class="cable-node" cx="24" cy="254" r="4.5"/>
+        <circle class="cable-node" cx="24" cy="272" r="4.5"/>
+
+        <rect class="rack-frame" x="24" y="14" width="192" height="312" rx="16"/>
+        <line class="rack-bezel" x1="40" y1="22" x2="200" y2="22"/>
+
+        <g class="rack-slot">
+          <rect x="40" y="32" width="160" height="46" rx="7"/>
+          <line class="vent" x1="54" y1="46" x2="104" y2="46"/>
+          <line class="vent" x1="54" y1="55" x2="92" y2="55"/>
+          <line class="vent" x1="54" y1="64" x2="104" y2="64"/>
+          <circle class="led" style="animation-delay:-.2s" cx="176" cy="55" r="4"/>
+          <circle class="led" style="animation-delay:-1.4s" cx="188" cy="55" r="4"/>
+        </g>
+        <g class="rack-slot">
+          <rect x="40" y="86" width="160" height="46" rx="7"/>
+          <line class="vent" x1="54" y1="100" x2="104" y2="100"/>
+          <line class="vent" x1="54" y1="109" x2="92" y2="109"/>
+          <line class="vent" x1="54" y1="118" x2="104" y2="118"/>
+          <circle class="led" style="animation-delay:-.9s" cx="176" cy="109" r="4"/>
+          <circle class="led" style="animation-delay:-.5s" cx="188" cy="109" r="4"/>
+        </g>
+        <g class="rack-slot">
+          <rect x="40" y="140" width="160" height="46" rx="7"/>
+          <line class="vent" x1="54" y1="154" x2="104" y2="154"/>
+          <line class="vent" x1="54" y1="163" x2="92" y2="163"/>
+          <line class="vent" x1="54" y1="172" x2="104" y2="172"/>
+          <circle class="led" style="animation-delay:-1.8s" cx="176" cy="163" r="4"/>
+          <circle class="led" style="animation-delay:-1.1s" cx="188" cy="163" r="4"/>
+        </g>
+        <g class="rack-slot">
+          <rect x="40" y="194" width="160" height="46" rx="7"/>
+          <line class="vent" x1="54" y1="208" x2="104" y2="208"/>
+          <line class="vent" x1="54" y1="217" x2="92" y2="217"/>
+          <line class="vent" x1="54" y1="226" x2="104" y2="226"/>
+          <circle class="led" style="animation-delay:-.6s" cx="176" cy="217" r="4"/>
+          <circle class="led" style="animation-delay:-2.1s" cx="188" cy="217" r="4"/>
+        </g>
+        <g class="rack-slot">
+          <rect x="40" y="248" width="160" height="46" rx="7"/>
+          <line class="vent" x1="54" y1="262" x2="104" y2="262"/>
+          <line class="vent" x1="54" y1="271" x2="92" y2="271"/>
+          <line class="vent" x1="54" y1="280" x2="104" y2="280"/>
+          <circle class="led" style="animation-delay:-1.5s" cx="176" cy="271" r="4"/>
+          <circle class="led" style="animation-delay:-.3s" cx="188" cy="271" r="4"/>
+        </g>
+      </svg>
+    </div>
+    </div>
     <a href="#about" class="scroll-cue" aria-label="Scroll down">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v15M5 13l7 7 7-7"/></svg>
     </a>
@@ -99,6 +180,9 @@
 
   <!-- ABOUT -->
   <section id="about" class="about">
+    <div class="gear-decor" aria-hidden="true">
+      <svg class="gear gear--4"><use href="#gear-icon"/></svg>
+    </div>
     <div class="container">
       <p class="section-tag reveal">
         <span class="lang-en">About</span><span class="lang-ar">نبذة</span>
@@ -110,12 +194,8 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            <span class="lang-en">I'm a Cloud &amp; DevOps Engineer based in Saudi Arabia, currently working at Technology Control Co., where I've been building hands-on production experience since September 2025 — starting with a structured JEEL training program covering Spring Boot, Angular, and DevOps practices, and now as a Software Developer &amp; DevOps Engineer supporting live deployments.</span>
-            <span class="lang-ar">أنا مهندس سحابة و DevOps مقيم في المملكة العربية السعودية، أعمل حالياً في شركة Technology Control Co.، حيث اكتسبت خبرة عملية منذ سبتمبر 2025 — بدايةً ببرنامج تدريبي منظم (JEEL) يغطي Spring Boot و Angular وممارسات DevOps، وحالياً كمهندس Software Developer &amp; DevOps Engineer يدعم عمليات النشر الحية.</span>
-          </p>
-          <p>
-            <span class="lang-en">My work centers on OpenShift and Kubernetes infrastructure, CI/CD automation, and DevSecOps — integrating SAST/DAST security scanning directly into delivery pipelines. I'm also expanding into data engineering, working with tools like Apache NiFi, Airflow, Iceberg, and Trino to build lakehouse-style data pipelines.</span>
-            <span class="lang-ar">يتركز عملي على بنية OpenShift و Kubernetes التحتية، وأتمتة CI/CD، وممارسات DevSecOps من خلال دمج فحوصات الأمان SAST/DAST مباشرة ضمن خطوط التسليم. كما أوسّع خبرتي في هندسة البيانات، باستخدام أدوات مثل Apache NiFi و Airflow و Iceberg و Trino لبناء خطوط بيانات على طراز Lakehouse.</span>
+            <span class="lang-en">I'm a DevOps and Data Engineer working with OpenShift, and I'm always working to grow my skills further across both fields.</span>
+            <span class="lang-ar">أنا مهندس DevOps وهندسة بيانات، أعمل مع OpenShift، وأسعى دائماً لتطوير مهاراتي أكثر في كلا المجالين.</span>
           </p>
 
           <ul class="about-facts">
@@ -153,10 +233,10 @@
             </span>
           </div>
           <div class="stat-card">
-            <span class="stat-number">5</span>
+            <span class="stat-number">6</span>
             <span class="stat-label">
-              <span class="lang-en">Professional certifications across Azure, AWS/GCP, Linux &amp; Red Hat</span>
-              <span class="lang-ar">شهادات مهنية عبر Azure و AWS/GCP و Linux و Red Hat</span>
+              <span class="lang-en">Professional certifications across Azure, AWS/GCP, Linux, Red Hat &amp; Kubernetes</span>
+              <span class="lang-ar">شهادات مهنية عبر Azure و AWS/GCP و Linux و Red Hat و Kubernetes</span>
             </span>
           </div>
         </div>
@@ -166,6 +246,10 @@
 
   <!-- SKILLS -->
   <section id="skills" class="skills">
+    <div class="gear-decor" aria-hidden="true">
+      <svg class="gear gear--5"><use href="#gear-icon"/></svg>
+      <svg class="gear gear--6"><use href="#gear-icon"/></svg>
+    </div>
     <div class="container">
       <p class="section-tag reveal">
         <span class="lang-en">What I Work With</span><span class="lang-ar">أعمل باستخدام</span>
@@ -217,6 +301,9 @@
 
   <!-- PROJECTS -->
   <section id="projects" class="projects">
+    <div class="gear-decor" aria-hidden="true">
+      <svg class="gear gear--7"><use href="#gear-icon"/></svg>
+    </div>
     <div class="container">
       <p class="section-tag reveal">
         <span class="lang-en">Selected Work</span><span class="lang-ar">أعمال مختارة</span>
@@ -229,7 +316,7 @@
 
         <article class="project-card reveal">
           <div class="tag-row">
-            <span class="tag">AI</span><span class="tag">Agile</span>
+            <span class="tag"><span class="lang-en">AI</span><span class="lang-ar">ذكاء اصطناعي</span></span><span class="tag">Agile</span>
           </div>
           <h3>
             <span class="lang-en">Diriyah Virtual Guide</span>
@@ -271,7 +358,7 @@
 
         <article class="project-card reveal">
           <div class="tag-row">
-            <span class="tag tag-accent">DevSecOps</span><span class="tag">Security Testing</span>
+            <span class="tag tag-accent">DevSecOps</span><span class="tag"><span class="lang-en">Security Testing</span><span class="lang-ar">اختبار الأمان</span></span>
           </div>
           <h3>
             <span class="lang-en">DevSecOps Lab: Vulnerable Flask App &amp; CI/CD Security Scans</span>
@@ -298,6 +385,9 @@
 
   <!-- CERTIFICATIONS -->
   <section id="certifications" class="certifications">
+    <div class="gear-decor" aria-hidden="true">
+      <svg class="gear gear--8"><use href="#gear-icon"/></svg>
+    </div>
     <div class="container">
       <p class="section-tag reveal">
         <span class="lang-en">Credentials</span><span class="lang-ar">المؤهلات</span>
@@ -309,27 +399,32 @@
       <div class="cert-grid">
         <div class="cert-card reveal">
           <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 2 8 4v6c0 5-3.4 7.7-8 10-4.6-2.3-8-5-8-10V6l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>Microsoft Certified: Azure Developer Associate</h3>
+          <h3><span class="lang-en">Microsoft Certified: Azure Developer Associate</span><span class="lang-ar">شهادة Microsoft: مطوّر Azure المعتمد</span></h3>
           <p class="cert-issuer"><span class="lang-en">Issuer:</span><span class="lang-ar">الجهة المانحة:</span> Microsoft</p>
         </div>
         <div class="cert-card reveal">
           <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 2 8 4v6c0 5-3.4 7.7-8 10-4.6-2.3-8-5-8-10V6l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>Microsoft Certified: DevOps Engineer Expert</h3>
+          <h3><span class="lang-en">Microsoft Certified: DevOps Engineer Expert</span><span class="lang-ar">شهادة Microsoft: خبير DevOps المعتمد</span></h3>
           <p class="cert-issuer"><span class="lang-en">Issuer:</span><span class="lang-ar">الجهة المانحة:</span> Microsoft</p>
         </div>
         <div class="cert-card reveal">
           <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 2 8 4v6c0 5-3.4 7.7-8 10-4.6-2.3-8-5-8-10V6l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>Red Hat Certified System Administrator (RHCSA)</h3>
+          <h3><span class="lang-en">CKAD – Certified Kubernetes Application Developer</span><span class="lang-ar">شهادة CKAD: مطوّر تطبيقات Kubernetes المعتمد</span></h3>
+          <p class="cert-issuer"><span class="lang-en">Issuer:</span><span class="lang-ar">الجهة المانحة:</span> KodeKloud</p>
+        </div>
+        <div class="cert-card reveal">
+          <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 2 8 4v6c0 5-3.4 7.7-8 10-4.6-2.3-8-5-8-10V6l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <h3><span class="lang-en">Red Hat Certified System Administrator (RHCSA)</span><span class="lang-ar">شهادة Red Hat: مسؤول أنظمة معتمد (RHCSA)</span></h3>
           <p class="cert-issuer"><span class="lang-en">Issuer:</span><span class="lang-ar">الجهة المانحة:</span> Red Hat</p>
         </div>
         <div class="cert-card reveal">
           <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 2 8 4v6c0 5-3.4 7.7-8 10-4.6-2.3-8-5-8-10V6l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>CompTIA Linux+ (XK0-005)</h3>
+          <h3><span class="lang-en">CompTIA Linux+ (XK0-005)</span><span class="lang-ar">شهادة CompTIA: Linux+ (XK0-005)</span></h3>
           <p class="cert-issuer"><span class="lang-en">Issuer:</span><span class="lang-ar">الجهة المانحة:</span> CompTIA</p>
         </div>
         <div class="cert-card reveal">
           <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 2 8 4v6c0 5-3.4 7.7-8 10-4.6-2.3-8-5-8-10V6l8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>Google Cloud Infrastructure for AWS Professionals</h3>
+          <h3><span class="lang-en">Google Cloud Infrastructure for AWS Professionals</span><span class="lang-ar">شهادة Google Cloud: البنية التحتية لمحترفي AWS</span></h3>
           <p class="cert-issuer"><span class="lang-en">Issuer:</span><span class="lang-ar">الجهة المانحة:</span> Google Cloud</p>
         </div>
       </div>
@@ -338,6 +433,9 @@
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
+    <div class="gear-decor" aria-hidden="true">
+      <svg class="gear gear--9"><use href="#gear-icon"/></svg>
+    </div>
     <div class="container">
       <p class="section-tag reveal">
         <span class="lang-en">Get in Touch</span><span class="lang-ar">تواصل معي</span>
