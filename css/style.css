@@ -463,8 +463,6 @@ html[dir="rtl"] .section-tag { text-transform: none; }
 .cert-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; line-height: 1.4; }
 .cert-issuer { font-size: .88rem; color: var(--text-muted); }
 .cert-issuer span { margin-inline-end: 4px; }
-.cert-training { font-size: .82rem; color: var(--text-muted); opacity: .75; margin-top: 2px; }
-.cert-training span { margin-inline-end: 4px; }
 
 /* ---------- Contact ---------- */
 .contact-text { color: var(--text-muted); font-size: 1.05rem; max-width: 560px; margin-bottom: 48px; }
