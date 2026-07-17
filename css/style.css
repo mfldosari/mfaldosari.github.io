@@ -298,6 +298,34 @@ section { position: relative; }
 .gear--8 { width: 180px; height: 180px; bottom: -70px; inset-inline-end: -60px; animation: gear-spin-ccw 65s linear infinite; }
 .gear--9 { width: 140px; height: 140px; top: -40px; inset-inline-start: 6%; animation: gear-spin-cw 55s linear infinite; }
 
+/* ---------- Circuit / neural-net atmosphere ---------- */
+.circuit {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  color: var(--accent);
+  opacity: .1;
+}
+.pulse-dot {
+  fill: var(--accent);
+  opacity: 0;
+  animation: pulse-travel 4.5s linear infinite;
+  filter: drop-shadow(0 0 3px var(--accent));
+}
+@keyframes pulse-travel {
+  0% { offset-distance: 0%; opacity: 0; }
+  8% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+.circuit--1 { width: 260px; height: 260px; bottom: 2%; inset-inline-end: 6%; }
+.circuit--2 { width: 200px; height: 200px; bottom: 4%; inset-inline-start: 8%; }
+.circuit--3 { width: 180px; height: 180px; top: 10%; inset-inline-start: 10%; }
+.circuit--4 { width: 230px; height: 230px; bottom: -40px; inset-inline-end: 4%; }
+.circuit--5 { width: 190px; height: 190px; top: 6%; inset-inline-start: 6%; }
+.circuit--6 { width: 200px; height: 200px; bottom: -30px; inset-inline-end: 8%; }
+
 section > .container { position: relative; z-index: 1; }
 section > .hero-glow { z-index: 0; }
 
@@ -319,7 +347,8 @@ section > .hero-glow { z-index: 0; }
 .cable-node { fill: var(--accent); opacity: .7; }
 
 @media (prefers-reduced-motion: reduce) {
-  .gear, .led { animation: none !important; }
+  .gear, .led, .pulse-dot { animation: none !important; }
+  .pulse-dot { opacity: 0 !important; }
 }
 
 /* ---------- Section headings ---------- */
